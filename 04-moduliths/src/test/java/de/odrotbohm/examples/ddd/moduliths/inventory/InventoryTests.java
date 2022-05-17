@@ -40,7 +40,7 @@ class InventoryTests {
 	@Test
 	void throwsInsufficientStockOnOutOfStock() {
 
-		var productId = ProductIdentifier.of(UUID.randomUUID().toString());
+		var productId = ProductIdentifier.of(UUID.randomUUID());
 		inventory.registerShipment(productId, 0);
 
 		assertThatExceptionOfType(InsufficientStock.class)

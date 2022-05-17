@@ -18,6 +18,12 @@ package de.odrotbohm.examples.ddd.c.persistence;
 import de.odrotbohm.examples.ddd.c.persistence.Customer.CustomerId;
 import de.odrotbohm.examples.ddd.c.persistence.Order.LineItem.LineItemId;
 import de.odrotbohm.examples.ddd.c.persistence.Order.OrderId;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Embeddable;
+import jakarta.persistence.EmbeddedId;
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -28,13 +34,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Embeddable;
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
 
 import org.jmolecules.ddd.types.AggregateRoot;
 import org.jmolecules.ddd.types.Identifier;
